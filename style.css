@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+form input {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

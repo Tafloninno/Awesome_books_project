@@ -197,7 +197,9 @@ To run tests, run the following command:
 
 > I'll add the following section to the webpage.
 
-- [ ] **project ready for now**
+- [ ] **Add navigation**
+- [ ] **Refactor using classes**
+
 
 
 

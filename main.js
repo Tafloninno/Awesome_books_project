@@ -33,7 +33,7 @@ function displayBooks() {
     bookHolder.innerHTML = `
       <h3>${books[i].author}<h3>
       <p>${books[i].book}</p>
-      <button id="remove">remove</button>
+      <button onclick="remove('${books[i].book}')" id="remove">remove</button>
       <hr>
        `;
     mainHolder.appendChild(bookHolder);
@@ -49,3 +49,8 @@ buttonAdd.addEventListener('click', (e) => {
 });
 
 displayBooks();
+
+function remove(book){
+  books = books.filter(bookEl => bookEl.book !== book)
+  localStorage.setItem("books", JSON.stringify(books));
+}

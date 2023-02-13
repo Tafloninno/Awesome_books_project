@@ -50,7 +50,8 @@ buttonAdd.addEventListener('click', (e) => {
 
 displayBooks();
 
-function remove(book){
-  books = books.filter(bookEl => bookEl.book !== book)
-  localStorage.setItem("books", JSON.stringify(books));
+function remove(book) {
+  books = books.filter((bookEl) => bookEl.book !== book);
+  localStorage.setItem('books', JSON.stringify(books));
 }
+remove();

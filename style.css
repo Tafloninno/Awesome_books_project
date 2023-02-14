@@ -1,14 +1,59 @@
 * {
-  box-sizing: border-box;
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  margin-bottom: 12px;
+header {
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 12px;
+  list-style: none;
+}
+
+button .remove {
+  padding-left: 10%;
+}
+
+tbody {
+  width: 80%;
+}
+
+tr {
+  width: 100%;
+}
+
+td {
+  width: 50%;
+  text-align: center;
+  padding: 2px;
+}
+
+form button {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 70%;
 }
 
 form input {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  padding: 5px 28px;
+}
+
+h2 {
+  padding: 12px;
 }

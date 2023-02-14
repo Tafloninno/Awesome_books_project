@@ -10,30 +10,31 @@ header {
 }
 
 main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 table {
-  width:70%;
+  width: 100%;
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
-  justify-content: space-around;
-  border: 1px solid #000000;
-  padding: 12px;
+  justify-content: space-between;
+  border: 1px solid #000;
   list-style: none;
 }
 
 button a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
 span {
-  padding-left: 20px ;
+  padding-left: 20px;
 }
 
 tbody {
@@ -44,15 +45,16 @@ tr {
   width: 100%;
 }
 
+td {
+  width: 100%;
+
+  /* text-align: center; */
+}
+
 tr td {
   width: 100%;
   padding-right: 20px;
   padding-left: -70px;
-}
-
-td {
-  width: 100%;
-  text-align: center;
 }
 
 form button {
@@ -68,4 +70,11 @@ form input {
 
 h2 {
   padding: 12px;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 }

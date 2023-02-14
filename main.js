@@ -1,3 +1,4 @@
+/* eslint-disable  max-classes-per-file */
 const bookList = document.querySelector('#book-list');
 const bookInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
@@ -49,8 +50,7 @@ class ListBooks {
   static addBooks(book) {
     const bookHolder = document.createElement('tr');
     bookHolder.innerHTML = `
-    <td>''${book.title}'' <span> by </span></td>
-    <td>${book.author}</td>
+    <td>''${book.title}'' <span> by </span> ${book.author}</td>
     <button><a href="#" class="remove">Remove</button>
       `;
     bookList.appendChild(bookHolder);

@@ -17,41 +17,53 @@ main {
 }
 
 table {
-  width: 40%;
+  width:70%;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid black;
+  justify-content: space-around;
+  border: 1px solid #000000;
   padding: 12px;
   list-style: none;
 }
 
-button .remove {
-  padding-left: 10%;
+button a {
+  text-decoration: none;
+  color:black;
+}
+
+span {
+  padding-left: 20px ;
 }
 
 tbody {
-  width: 80%;
+  width: 100%;
 }
 
 tr {
   width: 100%;
 }
 
+tr td {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: -70px;
+}
+
 td {
-  width: 50%;
+  width: 100%;
   text-align: center;
-  padding: 2px;
 }
 
 form button {
   display: flex;
   justify-content: flex-end;
-  margin-left: 70%;
+  margin-left: 80%;
+  padding: 5px 8px;
 }
 
 form input {
-  padding: 5px 28px;
+  padding: 3px 20px;
 }
 
 h2 {

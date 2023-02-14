@@ -27,10 +27,10 @@ class SavelocalItems {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeItem(title) {
+  static removeItem(author) {
     const books = SavelocalItems.getBook();
     books.forEach((book, index) => {
-      if (book.title === title) {
+      if (book.author === author) {
         books.splice(index, 1);
       }
     });
@@ -49,23 +49,23 @@ class ListBooks {
   static addBooks(book) {
     const bookHolder = document.createElement('tr');
     bookHolder.innerHTML = `
-      <td>${book.title}</td>
-      <td>${book.author}</td>
-      <button class="remove">remove</button>
-       `;
+    <td>''${book.title}'' <span> by </span></td>
+    <td>${book.author}</td>
+    <button><a href="#" class="remove">Remove</button>
+      `;
     bookList.appendChild(bookHolder);
   }
 
   static RemoveBook(item) {
     if (item.classList.contains('remove')) {
-      item.parentElement.remove();
+      item.parentElement.parentElement.remove();
     }
   }
 }
 
 ListBooks.displaybooks();
 
-document.addEventListener('DOMContentLoaded', ListBooks.displaybooks);
+// document.addEventListener('DOMContentLoaded', ListBooks.displaybooks);
 
 buttonAdd.addEventListener('click', (e) => {
   e.preventDefault();
@@ -78,5 +78,5 @@ buttonAdd.addEventListener('click', (e) => {
 
 bookList.addEventListener('click', (e) => {
   ListBooks.RemoveBook(e.target);
-  SavelocalItems.removeItem(e.target.title);
+  SavelocalItems.removeItem(e.target.parentElement.previousElementSibling.textContent);
 });

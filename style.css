@@ -55,9 +55,10 @@ main {
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+  height: 40vh;
 }
 
-.list .hidden{
+section.hidden{
   display: none;
 }
 
@@ -67,10 +68,12 @@ main h1 {
 
 .add {
   display: none;
+  height: 40vh;
 }
 
-.add .active {
+section.active {
   display: flex;
+  flex-direction: column;
 }
 
 table {
@@ -128,9 +131,10 @@ h2 {
   flex-direction: column;
   padding-left: 30%;
   padding-right: 30%;
+  height: 30vh;
 }
 
-.contact .active {
+.section.hidden {
   display: flex;
 }
 
@@ -152,6 +156,10 @@ h2 {
 }
 
 footer {
+  padding: 2px 30px;
+}
+
+.footer-section {
   width: 100%;
   position: relative;
   border: 3px solid black;
@@ -159,6 +167,7 @@ footer {
   right: 0;
   bottom: 0;
   margin-top: 13%;
+  padding: 2px 30px;
 }
 
 footer p {

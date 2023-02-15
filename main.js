@@ -3,45 +3,36 @@ const bookList = document.querySelector('#book-list');
 const bookInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const buttonAdd = document.querySelector('#add');
-// const navigation = document.querySelectorAll('.nav-links');
+const navList = document.querySelectorAll('.nav-link-one');
+const navAdd = document.querySelectorAll('.nav-link-two');
+const navContact = document.querySelectorAll('.nav-link-three');
 const List = document.querySelector('.list');
 const Add = document.querySelector('.add');
 const Contact = document.querySelector('.contact');
 
-// navigation.forEach((el) =>{
-//   el.addEventListener('click', ()=>{
-//    List.classList.toggle('hide');
-//    Add.classList.toggle('active'); 
-//    Contact.classList.toggle('active'); 
-//   })
-// })
+navList.forEach((element) => {
+  element.addEventListener('click', () => {
+    List.classList.remove('hidden');
+    Add.classList.remove('active');
+    Contact.classList.remove('active');
+  });
+});
 
-  // Get references to the links and content sections
-  const listLink = document.querySelector('.nav_bar li:nth-child(1) a');
-  const addLink = document.querySelector('.nav_bar li:nth-child(2) a');
-  const contactLink = document.querySelector('.nav_bar li:nth-child(3) a');
-  const listSection = document.querySelector('#list-books');
-  const addSection = document.querySelector('#add-books');
-  const contactSection = document.querySelector('#contact-us');
-  
-  // Add event listeners to the links
-  listLink.addEventListener('click', () => {
-    listSection.classList.remove('hidden');
-    addSection.classList.remove('active');
-    contactSection.classList.remove('active');
+navAdd.forEach((element) => {
+  element.addEventListener('click', () => {
+    List.classList.add('hidden');
+    Add.classList.add('active');
+    Contact.classList.remove('active');
   });
-  
-  addLink.addEventListener('click', () => {
-    listSection.classList.add('hidden');
-    addSection.classList.add('active');
-    contactSection.classList.remove('active');
+});
+
+navContact.forEach((element) => {
+  element.addEventListener('click', () => {
+    List.classList.add('hidden');
+    Add.classList.remove('active');
+    Contact.classList.add('active');
   });
-  
-  contactLink.addEventListener('click', () => {
-    listSection.classList.add('hidden');
-    addSection.classList.add('hidden');
-    contactSection.classList.remove('hidden');
-  });
+});
 
 class Books {
   constructor(title, author){

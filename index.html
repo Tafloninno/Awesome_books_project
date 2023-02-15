@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <nav class="navigation">
-            <a href="">Awesome Books</a>
-            <ul>
-                <li><a href="#">List</a></li>
+        <nav class="nav_bar">
+            <a href="#">Awesome books</a>
+             <ul>
+                <li><a href="#">list</a></li>
                 <li><a href="#">Add</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>
+             </ul>
         </nav>
     </header>
-
-    <h1>Awesome Books</h1>
-    <form id="form">
-        <main class="container">
-            <section id="book-list">
-             
-            </section>
+        <main>
+            <h1>All awesome books</h1>
+            <table class="container" >   
+                <tbody id="book-list">
+                </tbody>    
+            </table>
+            <h2>Add a new book</h2>
+            <form id="form">
+                <input type="text" placeholder="Book" id="title"><br><br>
+                <input type="text" placeholder="Author" id="author"><br><br>
+                <button id="add">Add</button>
+           </form>
         </main>
-        <input type="text" placeholder="Book" id="book" class="book_input"><br>
-        <input type="text" placeholder="Author" id="author"><br>
-        <button id="add">Add</button>
-    </form>
 
 <script src="main.js"></script>
 </body>

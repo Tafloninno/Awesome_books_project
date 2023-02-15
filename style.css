@@ -5,8 +5,47 @@
 }
 
 header {
-  text-align: center;
-  padding-bottom: 12px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.nav_bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 24px;
+  border: 3px solid black;
+  margin-top: 3%;
+}
+
+.nav_bar ul {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+}
+
+.nav_bar li {
+  border-right: 2px solid black;
+  padding-right: 5px;
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav_bar a {
+  text-decoration: none;
+  color: black;
+}
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8%;
 }
 
 main {
@@ -19,6 +58,35 @@ main {
   padding-right: 20px;
 }
 
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 70vh;
+}
+
+section.hidden {
+  display: none;
+}
+
+main h1 {
+  margin-bottom: 18px;
+}
+
+.add {
+  display: none;
+  height: 70vh;
+}
+
+section.active {
+  display: flex;
+  flex-direction: column;
+}
+
 table {
   width: 100%;
   display: flex;
@@ -26,11 +94,6 @@ table {
   justify-content: space-between;
   border: 1px solid #000;
   list-style: none;
-}
-
-button a {
-  text-decoration: none;
-  color: black;
 }
 
 span {
@@ -51,8 +114,7 @@ td {
 
 tr td {
   width: 100%;
-  padding-right: 20px;
-  padding-left: -70px;
+  padding-right: 10px;
 }
 
 form button {
@@ -70,9 +132,75 @@ h2 {
   padding: 12px;
 }
 
+.contact {
+  display: none;
+  height: 70vh;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.section.hidden {
+  display: flex;
+}
+
+.contact h2 {
+  font-weight: 600;
+  padding-top: -40px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  padding-left: 30px;
+}
+
+.contact p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.contact ul {
+  font-weight: 400;
+  font-size: 12px;
+  padding-left: 25px;
+}
+
+footer {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.footer-section {
+  width: 100%;
+  position: relative;
+  border: 3px solid black;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 13%;
+  padding: 2px 30px;
+}
+
 @media (min-width: 768px) {
   main {
     padding-left: 20%;
     padding-right: 20%;
+  }
+
+  .list {
+    height: 40vh;
+  }
+
+  .add {
+    display: none;
+    height: 40vh;
+  }
+
+  .contact {
+    display: none;
+    height: 40vh;
+    flex-direction: column;
+    padding-left: 30%;
+    padding-right: 30%;
   }
 }

@@ -12,3 +12,25 @@ form input {
   flex-direction: column;
   gap: 12px;
 }
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border: 2px solid black;
+  padding: 5px 12px;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 10px;
+}
+
+.navigation li {
+  list-style: none;
+}
+
+.navigation a {
+  text-decoration: none;
+}

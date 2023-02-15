@@ -39,8 +39,6 @@ class SavelocalItems {
   }
 }
 
-// const booksInserted = [];
-
 class ListBooks {
   static displaybooks() {
     const booksInserted = SavelocalItems.getBook();
@@ -65,7 +63,7 @@ class ListBooks {
 
 ListBooks.displaybooks();
 
-// document.addEventListener('DOMContentLoaded', ListBooks.displaybooks);
+
 
 buttonAdd.addEventListener('click', (e) => {
   e.preventDefault();

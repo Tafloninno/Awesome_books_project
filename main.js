@@ -35,7 +35,7 @@ navContact.forEach((element) => {
 });
 
 class Books {
-  constructor(title, author){
+  constructor(title, author) {
     this.title = title;
     this.author = author;
     this.id = Math.floor(Math.random() * 1000000);
@@ -43,41 +43,42 @@ class Books {
 }
 
 class SavelocalItems {
-   static getBook(){
+  static getBook() {
     let books;
-    if(localStorage.getItem('books') === null){
-      books = []
-    }else {
-      books = JSON.parse(localStorage.getItem('books'))
-    } 
+    if (localStorage.getItem('books') === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem('books'));
+    }
     return books;
-   }
-   static saveItem(book){
-      const books = SavelocalItems.getBook()
-      books.push(book)
-      localStorage.setItem('books', JSON.stringify(books))
-   }
+  }
+
+  static saveItem(book) {
+    const books = SavelocalItems.getBook();
+    books.push(book);
+    localStorage.setItem('books', JSON.stringify(books));
+  }
 
   static removeBook(id) {
     const books = SavelocalItems.getBook();
-    const updatedBooks = books.filter(book => book.id !== id);
+    const updatedBooks = books.filter((book) => book.id !== id);
     localStorage.setItem('books', JSON.stringify(updatedBooks));
   }
 }
 
 class ListBooks {
-  static displaybooks(){
-    const booksInserted = SavelocalItems.getBook()
-    booksInserted.forEach(book => ListBooks.addBook(book))
+  static displaybooks() {
+    const booksInserted = SavelocalItems.getBook();
+    booksInserted.forEach((book) => ListBooks.addBook(book));
   }
 
   static addBook(book) {
-    let bookHolder = document.createElement('tr')
+    const bookHolder = document.createElement('tr');
     bookHolder.innerHTML = `
       <td>''${book.title}'' by ${book.author}</td>
       <td><button class="remove" data-id="${book.id}">Remove</button></td>
-    `
-    bookList.appendChild(bookHolder)
+    `;
+    bookList.appendChild(bookHolder);
   }
 
   static deleteBook(id) {
@@ -91,20 +92,20 @@ class ListBooks {
 
 ListBooks.displaybooks();
 
-buttonAdd.addEventListener('click', (e)=>{
+buttonAdd.addEventListener('click', (e) => {
   e.preventDefault();
-  let title = bookInput.value;
-  let author = authorInput.value;
-  const book = new Books(title, author)
-  ListBooks.addBook(book)
-  SavelocalItems.saveItem(book)
+  const title = bookInput.value;
+  const author = authorInput.value;
+  const book = new Books(title, author);
+  ListBooks.addBook(book);
+  SavelocalItems.saveItem(book);
   bookInput.value = '';
   authorInput.value = '';
-})
+});
 
-bookList.addEventListener('click',(e)=>{
+bookList.addEventListener('click', (e) => {
   if (e.target.classList.contains('remove')) {
     const id = parseInt(e.target.dataset.id, 10);
     ListBooks.deleteBook(id);
   }
-})
+});

@@ -3,39 +3,50 @@
   margin: 0;
   box-sizing: border-box;
 }
-header{
+
+header {
   position: sticky;
   top: 0;
   width: 100%;
   padding-left: 30px;
   padding-right: 30px;
 }
-.nav_bar{
+
+.nav_bar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 2px 24px;
   border: 3px solid black;
+  margin-top: 3%;
 }
-.nav_bar ul{
+
+.nav_bar ul {
   display: flex;
   list-style: none;
   gap: 12px;
 }
-.nav_bar li{
+
+.nav_bar li {
   border-right: 2px solid black;
   padding-right: 5px;
 }
-.nav_bar a{
+
+button a {
   text-decoration: none;
   color: black;
 }
-.time{
+
+.nav_bar a {
+  text-decoration: none;
+  color: black;
+}
+
+.time {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 8%;
 }
-
 
 main {
   width: 100%;
@@ -55,10 +66,10 @@ main {
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  height: 40vh;
+  height: 70vh;
 }
 
-section.hidden{
+section.hidden {
   display: none;
 }
 
@@ -68,7 +79,7 @@ main h1 {
 
 .add {
   display: none;
-  height: 40vh;
+  height: 70vh;
 }
 
 section.active {
@@ -83,11 +94,6 @@ table {
   justify-content: space-between;
   border: 1px solid #000;
   list-style: none;
-}
-
-button a {
-  text-decoration: none;
-  color: black;
 }
 
 span {
@@ -128,10 +134,10 @@ h2 {
 
 .contact {
   display: none;
+  height: 70vh;
   flex-direction: column;
-  padding-left: 30%;
-  padding-right: 30%;
-  height: 30vh;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .section.hidden {
@@ -144,19 +150,24 @@ h2 {
   margin-bottom: 15px;
 }
 
+footer p {
+  padding-left: 30px;
+}
+
 .contact p {
   font-size: 13px;
   margin-bottom: 15px;
 }
 
-.contact ul  {
+.contact ul {
   font-weight: 400;
   font-size: 12px;
   padding-left: 25px;
 }
 
 footer {
-  padding: 2px 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .footer-section {
@@ -170,13 +181,26 @@ footer {
   padding: 2px 30px;
 }
 
-footer p {
-  padding-left: 30px;
-}
-
 @media (min-width: 768px) {
   main {
     padding-left: 20%;
     padding-right: 20%;
+  }
+
+  .list {
+    height: 40vh;
+  }
+
+  .add {
+    display: none;
+    height: 40vh;
+  }
+
+  .contact {
+    display: none;
+    height: 40vh;
+    flex-direction: column;
+    padding-left: 30%;
+    padding-right: 30%;
   }
 }

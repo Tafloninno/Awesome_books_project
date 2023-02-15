@@ -8,6 +8,7 @@ class Books {
   constructor(title, author) {
     this.title = title;
     this.author = author;
+    this.id = Math.floor(Math.random() * 1000000);
   }
 }
 
@@ -28,9 +29,9 @@ class SavelocalItems {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBooks(author) {
+  static removeBook(id) {
     const books = SavelocalItems.getBook();
-    const updatedBooks = books.filter((book) => book.author !== author);
+    const updatedBooks = books.filter((book) => book.id !== id);
     localStorage.setItem('books', JSON.stringify(updatedBooks));
   }
 }
@@ -38,23 +39,23 @@ class SavelocalItems {
 class ListBooks {
   static displaybooks() {
     const booksInserted = SavelocalItems.getBook();
-    booksInserted.forEach((book) => ListBooks.addBooks(book));
+    booksInserted.forEach((book) => ListBooks.addBook(book));
   }
 
-  static addBooks(book) {
+  static addBook(book) {
     const bookHolder = document.createElement('tr');
     bookHolder.innerHTML = `
-    <td>''${book.title}'' <span> by </span> ${book.author}</td>
-    <button><a href="#" class="remove">Remove</button>
-      `;
+      <td>''${book.title}'' by ${book.author}</td>
+      <td><button class="remove" data-id="${book.id}">Remove</button></td>
+    `;
     bookList.appendChild(bookHolder);
   }
 
-  static DeleteBook(item) {
-    if (item.classList.contains('remove')) {
-      const books = item.parentElement.previousElementSibling.textContent.split('by')[1].trim();
-      item.parentElement.parentElement.remove();
-      SavelocalItems.removeBooks(books);
+  static deleteBook(id) {
+    const bookRow = document.querySelector(`[data-id="${id}"]`).closest('tr');
+    if (bookRow) {
+      bookRow.remove();
+      SavelocalItems.removeBook(id);
     }
   }
 }
@@ -66,10 +67,15 @@ buttonAdd.addEventListener('click', (e) => {
   const title = bookInput.value;
   const author = authorInput.value;
   const book = new Books(title, author);
-  ListBooks.addBooks(book);
+  ListBooks.addBook(book);
   SavelocalItems.saveItem(book);
+  bookInput.value = '';
+  authorInput.value = '';
 });
 
 bookList.addEventListener('click', (e) => {
-  ListBooks.DeleteBook(e.target);
+  if (e.target.classList.contains('remove')) {
+    const id = parseInt(e.target.dataset.id, 10);
+    ListBooks.deleteBook(id);
+  }
 });

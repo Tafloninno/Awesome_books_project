@@ -28,14 +28,10 @@ class SavelocalItems {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeItem(author) {
+  static removeBooks(author) {
     const books = SavelocalItems.getBook();
-    books.forEach((book, index) => {
-      if (book.author === author) {
-        books.splice(index, 1);
-      }
-    });
-    localStorage.setItem('books', JSON.stringify(books));
+    const updatedBooks = books.filter(book => book.author !== author);
+    localStorage.setItem('books', JSON.stringify(updatedBooks));
   }
 }
 
@@ -54,9 +50,11 @@ class ListBooks {
     bookList.appendChild(bookHolder);
   }
 
-  static RemoveBook(item) {
+  static DeleteBook(item) {
     if (item.classList.contains('remove')) {
-      item.parentElement.parentElement.remove();
+    const books = item.parentElement.previousElementSibling.textContent.split('by')[1].trim();
+    item.parentElement.parentElement.remove();
+    SavelocalItems.removeBooks(books);
     }
   }
 }
@@ -75,6 +73,5 @@ buttonAdd.addEventListener('click', (e) => {
 });
 
 bookList.addEventListener('click', (e) => {
-  ListBooks.RemoveBook(e.target);
-  SavelocalItems.removeItem(e.target.parentElement.previousElementSibling.textContent);
+  ListBooks.DeleteBook(e.target);
 });

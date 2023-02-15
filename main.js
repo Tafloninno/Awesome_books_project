@@ -10,48 +10,6 @@ const List = document.querySelector('.list');
 const Add = document.querySelector('.add');
 const Contact = document.querySelector('.contact');
 
-navList.forEach((element) => {
-  element.addEventListener('click', () => {
-    List.classList.remove('hidden');
-    Add.classList.remove('active');
-    Contact.classList.remove('active');
-  });
-});
-
-navAdd.forEach((element) => {
-  element.addEventListener('click', () => {
-    List.classList.add('hidden');
-    Add.classList.add('active');
-    Contact.classList.remove('active');
-  });
-});
-
-navContact.forEach((element) => {
-  element.addEventListener('click', () => {
-    List.classList.add('hidden');
-    Add.classList.remove('active');
-    Contact.classList.add('active');
-  });
-});
-
-class Books {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-    this.id = Math.floor(Math.random() * 1000000);
-  }
-}
-
-class SavelocalItems {
-  static getBook() {
-    let books;
-    if (localStorage.getItem('books') === null) {
-      books = [];
-    } else {
-      books = JSON.parse(localStorage.getItem('books'));
-    }
-    return books;
-  }
 
   static saveItem(book) {
     const books = SavelocalItems.getBook();

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,19 +9,55 @@
 </head>
 <body>
     <header>
+        <nav class="nav_bar">
+            <a href="#">Awesome books</a>
+             <ul>
+                <li><a href="#" class="nav-link-one">list</a></li>
+                <li><a href="#" class="nav-link-two">Add</a></li>
+                <li><a href="#" class="nav-link-three">Contact</a></li>
+             </ul>
+        </nav>
+        <div class="time">
+            <p>February 15th 2023 9:00am</p>
+         </div>
+    </header>
 
+        <main>
+        <section id="list-books" class="list">
+            <h1>All awesome books</h1>
             <table class="container" >   
                 <tbody id="book-list">
                 </tbody>    
             </table>
-
+        </section>
+        <section class="add" id="add-books">
             <h2>Add a new book</h2>
             <form id="form">
                 <input type="text" placeholder="Book" id="title"><br><br>
                 <input type="text" placeholder="Author" id="author"><br><br>
                 <button id="add">Add</button>
            </form>
+        </section>
+        </main>
+        <section class="contact" id="contact-us"> 
+            <h2>Contact Information</h2>
+            <p>Do you have any question or you just want say "Hello"?
+                <br>
+             you can reach out to us!
+            </p>
+            <ul>
+                <li>Our email:mail@gmail.com</li>
+                <li>Our Phone Number:+622586723</li>
+                <li>Our Address:SheekhAli 17,Borama, Somalia </li>
+            </ul>
+        </section>
 
+        
+        <footer>
+            <div class="footer-section">
+                <p>Copyright <span>...</span></p>
+            </div>
+        </footer>
 
 <script src="main.js"></script>
 </body>

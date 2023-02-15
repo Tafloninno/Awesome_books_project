@@ -30,7 +30,7 @@ class SavelocalItems {
 
   static removeBooks(author) {
     const books = SavelocalItems.getBook();
-    const updatedBooks = books.filter(book => book.author !== author);
+    const updatedBooks = books.filter((book) => book.author !== author);
     localStorage.setItem('books', JSON.stringify(updatedBooks));
   }
 }
@@ -52,16 +52,14 @@ class ListBooks {
 
   static DeleteBook(item) {
     if (item.classList.contains('remove')) {
-    const books = item.parentElement.previousElementSibling.textContent.split('by')[1].trim();
-    item.parentElement.parentElement.remove();
-    SavelocalItems.removeBooks(books);
+      const books = item.parentElement.previousElementSibling.textContent.split('by')[1].trim();
+      item.parentElement.parentElement.remove();
+      SavelocalItems.removeBooks(books);
     }
   }
 }
 
 ListBooks.displaybooks();
-
-
 
 buttonAdd.addEventListener('click', (e) => {
   e.preventDefault();

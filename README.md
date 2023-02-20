@@ -172,7 +172,7 @@ To run tests, run the following command:
 
 <!-- AUTHORS -->
 
-## 👥 Mugisha.I ,  👥 salma.H <a name="authors"></a>
+## 👥 Mugisha.I , <a name="authors"></a>
 
 
 
@@ -182,11 +182,7 @@ To run tests, run the following command:
 
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mugisha-innocent-19b700238/)
 
-👤 **salma.H**
 
-- GitHub: [@githubhandle](https://github.com/saluumaa)
-
-- LinkedIn: [LinkedIn](Salma ibrahim](https://www.linkedin.com/in/salma-ibrahim-78bb5a14a/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -231,7 +227,7 @@ If you like this project... Kindly leave a star ⭐
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank  Microverse and my studying partner
+I would like to thank  Microverse
 
 
 

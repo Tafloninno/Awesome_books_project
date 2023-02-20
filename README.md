@@ -42,10 +42,7 @@
 ## 📖 Awesome_books_project website <a name="about-project"></a>
 
 
-
-
-
-
+Awesome book is a project built with a ES6 modules, with features that allow you to add to the list of books, remove from the list and save the list you already entered
 
 
 ## 🛠 Built With  VSCode  <a name="Built With VSCode"></a>
@@ -92,7 +89,7 @@
 
 
 
-- [Live Demo Link]()
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,7 +120,7 @@ Example command:
 
 Clone this repository to your desired folder:
 <br>
-<br>gh repo clonehttps://github.com/Tafloninno
+<br>gh repo clonehttps://github.com/Tafloninno/Awesome_books_project
 
 
 
@@ -131,17 +128,15 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-<!--
-Example command:
+
 
 ```sh
-  cd my-project
-  gem install
-  gh repo clone Tafloninno/First_capstone_project
-  cd capstone_project
+  
+  gh repo clone Tafloninno/Awesome_books_project
+  cd Awesome_books_project
   npm install -y
 ```
---->
+
 
 
 
@@ -172,7 +167,7 @@ To run tests, run the following command:
 
 <!-- AUTHORS -->
 
-## 👥 Mugisha.I ,  👥 salma.H <a name="authors"></a>
+## 👥 Mugisha.I , <a name="authors"></a>
 
 
 
@@ -182,11 +177,7 @@ To run tests, run the following command:
 
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mugisha-innocent-19b700238/)
 
-👤 **salma.H**
 
-- GitHub: [@githubhandle](https://github.com/saluumaa)
-
-- LinkedIn: [LinkedIn](Salma ibrahim](https://www.linkedin.com/in/salma-ibrahim-78bb5a14a/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -198,7 +189,7 @@ To run tests, run the following command:
 > I'll add the following section to the webpage.
 
 - [ ] **Add navigation**
-- [ ] **Refactor using classes**
+- [ ] **Add Es6 syntax**
 
 
 
@@ -229,9 +220,9 @@ If you like this project... Kindly leave a star ⭐
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
-I would like to thank  Microverse and my studying partner
+
+I would like to thank  Microverse
 
 
 

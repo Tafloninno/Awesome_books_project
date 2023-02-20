@@ -194,7 +194,7 @@ To run tests, run the following command:
 > I'll add the following section to the webpage.
 
 - [ ] **Add navigation**
-- [ ] **Refactor using classes**
+- [ ] **Add Es6 syntax**
 
 
 

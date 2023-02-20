@@ -1,4 +1,3 @@
-/* eslint-disable  max-classes-per-file */
 class SavelocalItems {
     static getBook = () => {
       const books = localStorage.getItem('books');

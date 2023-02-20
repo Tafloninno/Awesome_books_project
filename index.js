@@ -1,11 +1,12 @@
-/* eslint-disable  max-classes-per-file */
-
 import Books from './modules/books.js';
 import SavelocalItems from './modules/localStorage.js';
 import ListBooks from './modules/DOM.js';
+import Clock from './modules/datetime.js';
 
 const store = () => new SavelocalItems();
 store();
+const clock = () => new Clock('date');
+clock();
 
 const bookList = document.querySelector('#book-list');
 const bookInput = document.querySelector('#title');
